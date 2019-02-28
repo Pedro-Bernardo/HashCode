@@ -15,14 +15,9 @@ def parseInput(path):
     return photos
 
 
-def outputSlides(outpath, slides):
+def outputSlides(outpath, slideshow):
     with open(outpath, 'w') as out:
-        out.write(len(slides))
-        for s in slides:
-            out.write(''.join([s.getID(), '\n']))
-    
-
-
+        out.write(slideshow.toString())
 
 
 #[['H', ['cat', 'beach']],['V', ['cat', 'old people']]]
