@@ -14,6 +14,18 @@ def Main(input_path):
 
     orientation_dic = orientationDic(input_data)
     photo_list = photoList(input_data)
+
+    # build horizontal slides
+    hslides = []
+    vslides = orientation_dic['V']
+    
+    for s in orientation_dic['H']:
+        hslides.append(Slide([s]))
+
+
+    #print(str([s.toString() for s in hslides]))
+    #print(str(vslides))
+    """
     print(input_data)
     print(photo_list)
     print(orientation_dic)
@@ -26,7 +38,7 @@ def Main(input_path):
     ss.addSlide(s)
     ss.addSlide(s2)
     print(ss.toString())
-
+    """
 
 if __name__ == '__main__':
     Main(sys.argv[1])
