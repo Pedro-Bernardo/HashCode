@@ -35,4 +35,5 @@ def orientationDic(photos):
 
     return dic
 
+
 #[['H', ['cat', 'beach']],['V', ['cat', 'old people']]]
