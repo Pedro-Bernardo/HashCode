@@ -20,7 +20,7 @@ class Slide:
         for i in self.tags:
             if i in slide.getTags():
                 counter+=1
-        return min(len(self.tags-counter,counter,len(slide.getTags())-counter))
+        return min(len(self.tags)-counter,counter,len(slide.getTags())-counter)
     def toString(self):
         if len(self.idPhotos)==2:
             return str(self.idPhotos[0])+" "+str(self.idPhotos[1])
