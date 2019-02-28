@@ -11,9 +11,5 @@ def Main(input_path):
     for i in range(len(input_data)):
         input_data[i] = [i, input_data[i]]
 
-    
-
-
-
 if __name__ == '__main__':
     Main(sys.argv[1])

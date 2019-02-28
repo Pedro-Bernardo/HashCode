@@ -20,4 +20,12 @@ def outputSlides(outpath, slideshow):
         out.write(slideshow.toString())
 
 
+def orientationDic(photos):
+    dic = {'H': [], 'V': []}
+
+    for p in photos:
+        dic[p[1][0]].append([p[0], p[1][1]])
+
+    return dic
+
 #[['H', ['cat', 'beach']],['V', ['cat', 'old people']]]
