@@ -2,6 +2,7 @@ from utils import *
 from Slide import Slide
 from Slideshow import Slideshow
 import sys
+from greedy import *
 
 
 
@@ -17,13 +18,17 @@ def Main(input_path):
 
     # build horizontal slides
     hslides = []
-    vslides = orientation_dic['V']
-    
+    vslides = orientation_dic['V'] 
+
+    slides=greedyVertical(vslides)
+
     for s in orientation_dic['H']:
-        hslides.append(Slide([s]))
+        slides.append(Slide([s]))
 
 
-    #print(str([s.toString() for s in hslides]))
+
+    slideshow=greedy(slides)
+    print(slideshow.toString())
     #print(str(vslides))
     """
     print(input_data)

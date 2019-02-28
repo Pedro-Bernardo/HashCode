@@ -4,9 +4,9 @@ def greedy(lista): #lista de Slides
     s=Slideshow()
     s.addSlide(lista[0])
     ids= list(range(1,len(lista)))
-    maxi=-1
-    idMaxi=0
     while len(ids)>0:
+        maxi=-1
+        idMaxi=0
         for i in range(len(ids)):
             aux=s.compare(lista[ids[i]])
             if aux>maxi:
@@ -36,10 +36,6 @@ def greedyVertical(verticais): #[[ids,[tags]]]
                 maxi=aux
                 idMaxi=i
         result+=[Slide([verticais[ids[0]],verticais[ids[idMaxi]]])]
-        print(ids)
         del ids[idMaxi]
         del ids[0]
-    for i in result:
-        print(i.toString())
-
-greedyVertical([[0,["oi","crlh","eheheh"]],[1,["d","w"]],[2,["oi","qqqq"]],[3,["d","aaa"]]])
+    return result
