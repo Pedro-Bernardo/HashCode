@@ -10,6 +10,8 @@ class Slideshow:
         for i in self.slides:
             s+=str(i.toString())+"\n"
         return s
+    def compare(self,slide):
+        return self.slides[-1].score(slide)
 
 
     
