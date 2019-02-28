@@ -4,7 +4,7 @@ def greedy(lista): #lista de Slides
     s=Slideshow()
     s.addSlide(lista[0])
     ids= list(range(1,len(lista)))
-    while len(ids)>0:
+    while len(ids)>75000:
         maxi=-1
         idMaxi=0
         for i in range(len(ids)):
@@ -27,7 +27,7 @@ def greedyVertical(verticais): #[[ids,[tags]]]
    
     result=[]
     ids= list(range(len(verticais)))
-    while len(ids)>0:
+    while len(ids)>75000:
         maxi=-1
         idMaxi=0
         for i in range(1,len(ids)):
