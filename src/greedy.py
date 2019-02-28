@@ -1,4 +1,5 @@
 from Slideshow import *
+
 def greedy(lista): #lista de Slides
     s=Slideshow()
     s.addSlide(lista[0])
