@@ -19,7 +19,7 @@ def outputSlides(outpath, slides):
     with open(outpath, 'w') as out:
         out.write(len(slides))
         for s in slides:
-            out''.join([s.getID(), '\n'])
+            out.write(''.join([s.getID(), '\n']))
     
 
 
