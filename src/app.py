@@ -1,5 +1,6 @@
 from utils import *
 from Slide import Slide
+from Slideshow import Slideshow
 import sys
 
 
@@ -10,6 +11,22 @@ def Main(input_path):
     # add the ID to the photos
     for i in range(len(input_data)):
         input_data[i] = [i, input_data[i]]
+
+    orientation_dic = orientationDic(input_data)
+    photo_list = photoList(input_data)
+    print(input_data)
+    print(photo_list)
+    print(orientation_dic)
+
+    s = Slide([photo_list[0]])
+    s2 = Slide([photo_list[1],photo_list[2]])
+    print(s.toString())
+    print(s2.toString())
+    ss = Slideshow()
+    ss.addSlide(s)
+    ss.addSlide(s2)
+    print(ss.toString())
+
 
 if __name__ == '__main__':
     Main(sys.argv[1])

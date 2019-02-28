@@ -20,6 +20,13 @@ def outputSlides(outpath, slideshow):
         out.write(slideshow.toString())
 
 
+def photoList(input_data):
+    for i in range(len(input_data)):
+        input_data[i] = [input_data[i][0], input_data[i][1][1]]
+
+    return input_data
+
+
 def orientationDic(photos):
     dic = {'H': [], 'V': []}
 

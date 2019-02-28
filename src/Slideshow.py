@@ -6,9 +6,9 @@ class Slideshow:
         self.slides+=[slide]
     def toString(self):
         s=""
-        s+=len(self.slides)+"\n"
+        s+=str(len(self.slides))+"\n"
         for i in self.slides:
-            s+=i.toString()+"\n"
+            s+=str(i.toString())+"\n"
         return s
 
 

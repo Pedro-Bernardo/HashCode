@@ -1,14 +1,16 @@
 
 
 class Slide:
-    def __init__(self,t):
-        self.tags=[]
-        self.idPhotos=[]
-        for i in t:
-            if i[1] not in self.tags:
-                self.tags+=[i[1]]
-            self.idPhotos+=[i[0]] 
-        self.nTags=len(self.tags)
+    def __init__(self, photos):
+        self.tags = set()
+        self.idPhotos = []
+
+        for p in photos:
+            self.idPhotos.append(p[0])
+            self.tags = self.tags.union(set(p[1]))
+
+        self.nTags = len(self.tags)
+
     def getTags(self):
         return self.tags
     def getNTags(self):
@@ -21,9 +23,9 @@ class Slide:
         return min(len(self.tags-counter,counter,len(slide.getTags())-counter))
     def toString(self):
         if len(self.idPhotos)==2:
-            return self.idPhotos[0]+" "+self.idPhotos[1]
+            return str(self.idPhotos[0])+" "+str(self.idPhotos[1])
         else:
-            return self.idPhotos[0]
+            return str(self.idPhotos[0])
 
 
     
